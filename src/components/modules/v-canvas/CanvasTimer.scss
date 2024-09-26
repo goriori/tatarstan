@@ -1,0 +1,42 @@
+@import "@/assets/scss/variables";
+
+.timer{
+  position: absolute;
+  z-index: 5;
+  top: 2775px;
+  left: 50%;
+  width: 338px;
+  height: auto;
+  transform: translateX(-50%);
+  //pointer-events: none;
+  &-item{
+    width: 338px;
+    height: 338px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 264px;
+    font-weight: 700;
+    opacity: 0;
+
+    &.active{
+      position: absolute;
+      animation: timer 1s ease forwards;
+    }
+
+    @keyframes timer {
+      from{
+        opacity: 1;
+        top: 0px;
+        transform: scale(1);
+      }
+      to{
+        opacity: 0;
+        top: 500px;
+        transform: scale(0.7);
+      }
+    }
+  }
+}

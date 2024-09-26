@@ -1,0 +1,32 @@
+@import 'fonts';
+@import 'base';
+@import 'variables';
+@import 'null';
+@import 'animation';
+@import "mixins";
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+
+.page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-top {
+    flex: 1 0 10dvh;
+  }
+
+  &-center {
+    flex: 1 0 80dvh;
+  }
+
+  &-bottom {
+    flex: 1 0 10dvh;
+  }
+}
